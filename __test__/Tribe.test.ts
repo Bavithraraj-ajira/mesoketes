@@ -5,5 +5,8 @@ describe("Tribe", () => {
         const tribe = new Tribe(5);
         expect(tribe.attack()).toBe(5);
     });
+    it("should throw error for negative strength", () => {
+        expect(() => new Tribe(-5)).toThrow("Strength is negative");
+    });
 
 });
